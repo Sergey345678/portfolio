@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{%block content%}
+{% for nail_master in nail_masters %}
+    <div class="list card">
+      <div class="card-header">
+        {{nail_master.id}}
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Name: {{nail_master.name}}</li>
+        <li class="list-group-item">Price per hour: {{nail_master.price_per_hour}}</li>
+        <li class="list-group-item">Category: {{nail_master.category}}</li>
+        <li class="list-group-item">
+            <a class="btn btn-dark" href="{% url 'nail_master_review_list' nail_master_id=nail_master.id%}" role="button">Reviews</a>
+            {% if user.is_authenticated %}
+                <a class="btn btn-dark" href="{% url 'add_review' nail_master_id=nail_master.id%}">Add review</a>
+                <a class="btn btn-dark" href="{% url 'add_appointment' nail_master_id=nail_master.id%}">Add appointment</a>
+            {% endif %}
+        </li>
+      </ul>
+    </div>
+{% endfor %}
+{% endblock %}

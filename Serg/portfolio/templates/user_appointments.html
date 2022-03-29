@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+{%block content%}
+{% for appointment in appointments %}
+    <div class="list card">
+      <div class="card-header">
+        {{appointment.id}}
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Date: {{appointment.date}}</li>
+        <li class="list-group-item">Nail Master: {{appointment.nail_master}}</li>
+      </ul>
+    </div>
+{% endfor %}
+{% endblock %}

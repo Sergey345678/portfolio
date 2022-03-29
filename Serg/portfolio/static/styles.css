@@ -1,0 +1,30 @@
+body {
+    background-attachment: fixed;
+    background-image: url('img/NM.jpg');
+}
+
+.main {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.list {
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.NM-form input, .NM-form textarea {
+    margin: 10px auto;
+    display: block;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.NM-form label {
+    width: 50%;
+    margin: 0 auto;
+    display:block;
+}
